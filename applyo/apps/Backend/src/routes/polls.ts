@@ -50,10 +50,12 @@ router.get('/:id', async (req: Request, res: Response): Promise<void> => {
     }
     
     // Calculate results
-    const results = poll.options.map((option, index) => ({
-      option,
-      votes: poll.votes.filter(v => v.optionIndex === index).length
-    }));
+
+    // Replace these two instances in polls.ts
+const results = poll.options.map((option: string, index: number) => ({
+  option,
+  votes: poll.votes.filter((v: any) => v.optionIndex === index).length
+}));
     
     res.json({
       id: poll.id,

@@ -10,13 +10,21 @@ const server = http.createServer(app);
 // Socket.io for real-time updates
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:5173", // Your React frontend URL
+    origin: [
+      "http://localhost:5173",
+      "https://applyo-git-main-rajputsny50-gmailcoms-projects.vercel.app"
+    ],
     methods: ["GET", "POST"]
   }
 });
 
-// Middleware
-app.use(cors());
+app.use(cors({
+  origin: [
+    "http://localhost:5173",
+    "https://applyo-git-main-rajputsny50-gmailcoms-projects.vercel.app"
+  ],
+  credentials: true
+}));
 app.use(express.json());
 
 // Make io available in routes

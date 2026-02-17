@@ -12,7 +12,8 @@ const io = new Server(server, {
   cors: {
     origin: [
       "http://localhost:5173",
-      "https://applyo-git-main-rajputsny50-gmailcoms-projects.vercel.app"
+      "https://applyo-git-main-rajputsny50-gmailcoms-projects.vercel.app",
+      "https://applyo-lake.vercel.app/"
     ],
     methods: ["GET", "POST"]
   }

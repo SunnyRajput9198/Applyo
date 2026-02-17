@@ -22,6 +22,8 @@ const io = new Server(server, {
 app.use(cors({
   origin: [
     "http://localhost:5173",
+
+    
     "https://applyo-p8k2iw73e-rajputsny50-gmailcoms-projects.vercel.app",
      "https://applyo-lake.vercel.app"
   ],
